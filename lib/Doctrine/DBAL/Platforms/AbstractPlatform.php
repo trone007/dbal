@@ -1027,7 +1027,7 @@ abstract class AbstractPlatform
 
     /**
      * Returns the FOR UPDATE expression.
-     * 
+     *
      * @return string
      */
     public function getForUpdateSQL()
@@ -1173,7 +1173,7 @@ abstract class AbstractPlatform
 
     /**
      * Returns the SQL to drop a foreign key.
-     * 
+     *
      * @param \Doctrine\DBAL\Schema\ForeignKeyConstraint|string $foreignKey
      * @param \Doctrine\DBAL\Schema\Table|string                $table
      *

@@ -713,7 +713,8 @@ class PostgreSqlPlatform extends AbstractPlatform
      */
     public function getSequenceNextValSQL($sequenceName)
     {
-        return "SELECT NEXTVAL('" . $sequenceName . "')";
+        $sequenceName = explode(".", str_replace('"', '', $sequenceName));
+        return "SELECT NEXTVAL('" . $sequenceName[0] . ".\"" . $sequenceName[1] ."\"')";
     }
 
     /**
